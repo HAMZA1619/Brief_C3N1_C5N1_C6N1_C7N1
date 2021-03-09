@@ -41,7 +41,7 @@
 <body>
 <div>
     <h1>Connexion</h1>
-    <form action="index1.php" method="POST">
+    <form action="connection.php" method="POST">
     <label for="name">Nom d'utilisateur</label>
     <input type="text"  name="name" placeholder="Nom d'utilisateu">
     <label for="password">Mot de passe</label>
@@ -50,7 +50,7 @@
     </form>
     </div>
 
-
+     <a href="login.php"><button style="background-color: #ffff;">login</button></a>
 
     <?php
      if (isset($_POST["name"], $_POST["password"])) {

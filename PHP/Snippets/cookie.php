@@ -9,17 +9,23 @@
 </head>
 <body>
     <?php
-      // if (isset($_COOKIE["hamza"])) {
-      //   $name = "hamza";
-      //   $value = date('Y-m-d H:i:s');
-      //   setcookie($name,$value );
-      //  $h = "C'est votre premiere visite: ".$value;
-      //  echo $h;
-      // }
+      // premiere visite 
+        // $name = "hamza";
+        // $value = date('Y-m-d H:i:s');
+        // setcookie($name,$value );
+        // echo "C'est votre premiere visite: ".$value;
+
+
+
       if(isset($_COOKIE["hamza"])){
         $dates=unserialize($_COOKIE["hamza"]);
+        $name = "hamza";
         $dates[]=time();
-        setcookie("hamza",serialize($dates));
+        setcookie(  $name ,serialize($dates));
+
+      // print_r($dates);
+       
+        //afficher le message 
         echo " Vous avez consulté cette page ".count($dates)." fois , voici les détails:";
         echo "<ul>";
         foreach ($dates as $key => $value) {
@@ -29,10 +35,19 @@
       }
       else{
         $dates[]=time();
-        setcookie("hamza",serialize($dates));
-        echo "C'est votre première visite :".date("d-m-Y H:i:s",time());
+        $name = "hamza";
+        setcookie(  $name ,serialize($dates));
+        echo "C'est votre première visite : ".date("d-m-Y H:i:s",time());
       }
-  
+   
+
+
+      // $hamza = serialize("hamza");
+      // echo ( $hamza);
+      // echo "<br>";
+      // echo unserialize( $hamza);
+
+
 
     ?>
 </body>

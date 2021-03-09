@@ -14,7 +14,7 @@
     session_start();
      echo  $_SESSION['name']; 
      ?>
-     <form action="index3.php" method="POST">
+     <form action="home.php" method="POST">
     <input type="submit" value="logout" name="logout">
     </form>
      <?php
@@ -22,7 +22,7 @@
         session_start();
         unset($_SESSION["password"]);
         unset($_SESSION["name"]);
-        header("Location: index2.php"); 
+        header("Location: login.php"); 
     }
 
 ?>

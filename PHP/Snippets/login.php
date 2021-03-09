@@ -41,7 +41,7 @@
 <body>
 <div>
     <h1>LOGIN</h1>
-    <form action="index2.php" method="POST">
+    <form action="login.php" method="POST">
     <label for="name">Nom d'utilisateur</label>
     <input type="text"  name="name" placeholder="Nom d'utilisateu">
     <label for="password">Mot de passe</label>
@@ -49,7 +49,7 @@
     <button type="submit">login</button>
     </form>
     </div>
-
+  <a href="connection.php"><button style="background-color: #ffff;">connection</button> </a>
 
    <?php session_start(); ?>
     <?php
@@ -74,16 +74,16 @@ while ($row = mysqli_fetch_array($r)) {
    
 }
 if ($name !==  $db_name && $pass !== $db_pass ) {
-  header("Location: index2.php") ;
+  header("Location: login.php") ;
 }
 else if($name ==  $db_name && $pass == $db_pass) {
 
     $_SESSION['name'] =  $db_name;
-    header("Location: index3.php") ;
+    header("Location: home.php") ;
 
 }
 else {
-    header("Location: index2.php") ;
+    header("Location: login.php") ;
 }
 }
     ?>
