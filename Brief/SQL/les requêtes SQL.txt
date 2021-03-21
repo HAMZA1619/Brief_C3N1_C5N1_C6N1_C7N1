@@ -1,0 +1,28 @@
+CREATE DATABASE dev;
+create table developpeurs(
+  id INTEGER PRIMARY KEY AUTO_INCREMENT,
+  nom varchar(255) NOT NULL ,
+  prénom varchar(255) NOT NULL ,
+  mail varchar(255) NOT NULL ,
+  password  varchar(255) NOT NULL 
+);
+
+Create table technos (
+  
+   id INTEGER not null,
+   Foreign Key(id) references developpeurs ( id),
+   html INTEGER, 
+   cgi  INTEGER,
+   js  INTEGER ,
+   ajax INTEGER ,
+   php INTEGER
+  
+);
+	
+create table formations (
+  
+  id INTEGER not null,
+ Foreign Key(id) references developpeurs ( id),
+  techno varchar(255),
+  date DATE 
+);
