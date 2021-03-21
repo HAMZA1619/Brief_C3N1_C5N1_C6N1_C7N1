@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin:auto;
+    font-family: Verdana;
+    font-size: 14px;
+    background-color: rgb(92, 182, 182);
+    }
+.art{
+    margin-left: 25%;
+    background-color: rgb(92, 182, 182);
+}
+.nav{
+    padding: 20px;
+    border: transparent;
+    height: 70px;
+    text-align: end;
+     background-color:rgb(4, 173, 173);
+   
+}
+a{
+    text-decoration: none;
+    margin: 10px ;
+    color: rgb(54, 54, 54);
+}
+a:hover {
+    color: #fff;
+  }
+ul{
+   margin-left: 25%;
+  font-size: large;
+}
+li{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 35%;
+   
+}
+.delete {
+  
+  background-image: url(./img/delete.png);
+  background-repeat: no-repeat;
+  background-position: center;
+    border-radius: 4px;
+    width: 30px;
+    height: 40px;
+    padding: 10px ;
+    color: transparent;
+
+} 
+
+
+
+    h1,h2{
+        text-align: center;
+        margin: 40px auto;
+    }
+    
+    .form{
+        padding: 20px ;
+        background-color: #ffffff;
+        margin:auto;
+        width: 65%;
+        height: 450px;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    input {
+        background-color: #ffff;
+        width: 70%;
+        height: 40px;
+        margin-bottom: 30px;
+        border: transparent;
+        border-bottom: 1px solid ;
+        padding: 10px;
+    }
+      input:hover , input:active {
+       
+        border: transparent;
+        border-bottom: 1px solid rgb(120, 236, 245);
+       
+        }
+        div {
+            padding: 5px;
+           border: 1px solid black;
+           width: 65%;
+           height: 30px;
+            display: flex;
+            justify-content: space-between;
+             margin-top: 15px;
+            border-radius: 6px;
+            background-color: rgb(120, 236, 245);
+        }
+        .div {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+             margin-top: 15px;
+            border: transparent;
+            background-color: transparent;
+        }
+    
+    .bouton{
+        border: 1px solid ;
+        width: 40%;
+        border-radius: 6px;
+    }
+    .bouton:hover {
+    color: #ffffff;
+    background-color: rgb(120, 236, 245);
+    border: 1px solid  rgb(120, 236, 245);
+    border-radius: 6px;
+    }
+    .btn{
+        width: 10%;
+        margin-left: 5px; 
+    }
+    .niveau{
+        border: 1px solid ;
+        width: 15%;
+        border-radius: 6px;
+    }
+    .up{
+        display: flex;
+    }
+    .niv{
+      margin-right: 3px;
+        height: 40px;
+        border-radius: 6px;    
+
+    }
+    .updete{
+        background-image: url(./img/update.png);
+    }
+
+    
