@@ -9,7 +9,7 @@
     <input  type="text" placeholder="prénom" name="prenom"required>
     <label for="password">Password :</label>
     <input type="password" name="password" placeholder="********" required>
-    <input class="bouton" type="submit" name="submit" value="submit">
+    <input class="bouton"  type="submit" name="submit" value="submit">
     </form>
     </div>
  <?php session_start() ?>
@@ -18,6 +18,7 @@
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $password = $_POST['password'];
+  
     $con = mysqli_connect('localhost','root','','dev');
      if (!$con) {
     die("erreur") .mysqli_error($con);
@@ -34,6 +35,7 @@
        $db_prenom=$row['prénom'];
        $db_pass = $row['password'];
        $db_id = $row['id'];
+      //  $db_pass  =  password_verify( $db_pass ,PASSWORD_BCRYPT);
     if($nom == $db_nom && $prenom ==  $db_prenom && $password == $db_pass) { 
         header("Location: profile.php") ;
         $_SESSION['db_nom'] = $nom;

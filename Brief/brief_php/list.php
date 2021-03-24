@@ -46,7 +46,7 @@ if ($re) {
     
    while($row= mysqli_fetch_array($re))
    {
-        echo "<ul>";
+        echo "<ul class='li'>";
         echo "<li>- ".$row['nom']." ". $row['prénom']."</li>";
        echo "</ul>";
       
@@ -63,7 +63,7 @@ if ($re) {
     
    while($row= mysqli_fetch_array($re))
    {
-        echo "<ul>";
+        echo "<ul class='li'>";
         echo "<li>- ".$row['nom']." ". $row['prénom']."</li>";
        echo "</ul>"; 
    }}
@@ -91,7 +91,8 @@ if ($re) {
     $dev_id=$row['id'];
         echo "<ul>";
         echo "<li>- ".$row['nom']." ". $row['prénom'];
-        ?><form class="up" action='list.php' method='post' >
+        // ?niveau=<?php echo $_GET['niveau'];?&submit=submit
+        ?><form class="up" action="list.php" method='post' >
 <select class="niv" name='niv'>
 <option value='-1'>-1</option>
 <option value='0'>0</option>
@@ -109,7 +110,6 @@ if ($re) {
            }
 }  
 } 
-
 //// update techno niveau
 if (isset($_REQUEST["up"])) {
     $su= $_SESSION['sub'];
@@ -119,7 +119,10 @@ if (isset($_REQUEST["up"])) {
     if (!$up) {
         die('erreur').mysqli_error($up);
     
-      } 
+      }
+      echo "<Script>
+alert('level has been updated '); 
+</Script>"; 
     }
 
 
@@ -145,6 +148,9 @@ while($row= mysqli_fetch_array($re))
     }
    
 }
+echo "<Script>
+alert('formation has been added '); 
+</Script>";
 }
 
 
@@ -156,6 +162,9 @@ if (isset($_REQUEST["delete"])) {
     if (!$d) {
         die('erreur').mysqli_error($d);
      }
+     echo "<Script>
+     alert('formation has been deleted '); 
+     </Script>";
 
 }
 

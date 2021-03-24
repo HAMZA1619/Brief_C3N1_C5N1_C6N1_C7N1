@@ -17,6 +17,7 @@ body {
     padding: 20px;
     border: transparent;
     height: 70px;
+    width: 40px;
     text-align: end;
      background-color:rgb(4, 173, 173);
    
@@ -26,7 +27,7 @@ a{
     margin: 10px ;
     color: rgb(54, 54, 54);
 }
-a:hover {
+a:hover,a:active {
     color: #fff;
   }
 ul{
@@ -38,6 +39,9 @@ li{
     justify-content: space-between;
     margin-right: 35%;
    
+}
+.li{
+    margin-top: 10px;
 }
 .delete {
   

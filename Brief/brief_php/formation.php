@@ -39,7 +39,7 @@ if ($re) {
    while( $row= mysqli_fetch_array($re) and $ro= mysqli_fetch_assoc($r))
    {
     
-       echo "<ul>";
+       echo "<ul class='li' >";
         echo "<li > - ".$row['nom']." ". $row['prénom']." <span > On <strong>".$ro['techno']."</strong> Le : <strong> ". $ro['date']."</strong></span></li>";
        echo "</ul>";
       

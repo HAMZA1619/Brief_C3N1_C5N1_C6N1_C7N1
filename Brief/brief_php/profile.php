@@ -1,4 +1,5 @@
 <?php  session_start() ; ?>
+
 <?php 
 if (isset($_SESSION['db_nom'])) {
   
@@ -30,6 +31,7 @@ include "header.php";
       
   
 ?>
+
 </nav>
 
 <?php  

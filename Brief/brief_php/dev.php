@@ -50,8 +50,7 @@ if ($re) {
         if (!$del) {
             die('erreur').mysqli_error($del);
         
-          } 
-           
+          }      
           
 }}
 }}
