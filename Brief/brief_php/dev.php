@@ -3,6 +3,7 @@
 if (isset($_SESSION['db_nom'])) {
   include "header.php";
   include "link.php";
+  include "db_conn.php";
 
  echo "<h1>".$_SESSION['db_nom']." ".$_SESSION['db_prenom']."</h1>";
  

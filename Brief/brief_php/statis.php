@@ -18,9 +18,9 @@ if (isset($_SESSION['db_nom'])) {
     <?php
     if (isset($_POST["submit"])) {
       $value=  $_POST["submit"];
-   ;
+   
        
-    }
+    
    $cout1 = "SELECT * FROM technos where  $value = '5' ";
    if(!$cout1)
    {
@@ -74,7 +74,7 @@ if (isset($_SESSION['db_nom'])) {
        echo "<h3>Nombre unconnu : ".count($four ?? [])."</h3> <progress value='$fou' max='100'> </progress>";
        echo "<h3>Totale du mombre : $totale </h3>";
        echo "</div>";
-      
+    }
     ?>
    
     
