@@ -3,10 +3,12 @@
  echo  "</nav>";?>
   <h1>WELCOME TO WEDEV</h1>
 
-<img style="margin-left: 31%; width: 35%; height: 30%;" src="./img/de.png" alt="">
+<img class='img'  src="./img/de.png" alt="">
 
-<a href="registr.php"><input style="margin-left: 28%;" type="button" class="bouton"value="ENREGISTREZ VOUS"></a>
-
-
+<a href="registr.php">
+  <input style="margin-left: 28%;" type="button" class="bouton"value="REGISTER">
+</a>
+</body>
+</html>
 
 

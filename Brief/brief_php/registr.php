@@ -1,6 +1,7 @@
 <?php include "header.php" ?>
-<?php echo "</nav>" ?>
-   <h1>ENREGISTREZ VOUS</h1>
+<?php echo " <a href='login.php'>LOGIN </a> ";
+ echo "</nav>" ?>
+    <h1>ENREGISTREZ VOUS</h1>
     <form class="form" action="enregistrer.php" method="POST">
                   <label>Nom :</label>
                   <input type="text" placeholder="nom"  name="nom" required />
@@ -12,8 +13,6 @@
                   <input type="password" name="password" placeholder="********" required />
                   <input class="bouton" type="submit" name="submit" value="submit">
       </form>
-        
-    
-  
+
 </body>
 </html>

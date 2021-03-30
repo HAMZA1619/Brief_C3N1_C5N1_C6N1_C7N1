@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>WeDev</title>
 </head>
 <body onload=showDate();>
-   <nav class="nav">
-       <a href="home.php"><img style="width: 10%; position:absolute; left: 2%; height: 5%;" src="./img/wedev-logo.png" alt=""></a>
+   <nav class="nav" >
+       <a href="home.php"><img class="logo" src="./img/wedev-logo.png" alt=""></a>
        <script type="text/javascript"> 
          function refresh(){
              var t = 1000; 
@@ -26,4 +26,4 @@
              refresh();
           }
       </script>
-       <span id='horloge' style="font-size:28px; position:absolute; left: 15%; "></span>
+       <span id='horloge' class="clock" ></span>
