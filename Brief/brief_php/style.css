@@ -38,6 +38,7 @@ li{
     display: flex;
     justify-content: space-between;
     margin-right: 35%;
+ 
    
 }
 .li{
@@ -165,6 +166,22 @@ li{
     }
 td, th{
     padding: 10px;
+  
+}
+.fm{
+    width: 80%;
+    margin-left: 10%;
+    
+}
+th {
+    background-color: #e92b2be3;
+    color: white;
+  }
+tr:nth-child(even) {
+    background-color: #f8f7f79f;
+}
+tr:nth-child(odd) {
+    background-color: #929191a2;
 }
    .logo{
     width: 10%;
@@ -208,3 +225,4 @@ td, th{
      .sid{
          margin-left: 30%;
      }  
+     

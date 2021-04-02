@@ -14,6 +14,7 @@
 if (isset($_POST["submit"])) {
     $mail = trim(strip_tags($_POST['mail'])) ;
     $password = trim(strip_tags( $_POST['password']));
+   
 
     include "db_conn.php";
 
@@ -32,7 +33,7 @@ if (isset($_POST["submit"])) {
         $db_id = $row['id'];
    
       //   verified the password
-      if( $password == $db_pass ) { 
+      if(password_verify($password, $db_pass) ) { 
          header("Location: profile.php") ;
          $_SESSION['db_nom'] = $db_nom;
          $_SESSION['db_prenom']=$db_prenom ;
@@ -40,6 +41,7 @@ if (isset($_POST["submit"])) {
          
          
       }
+
     
     
      }}   }

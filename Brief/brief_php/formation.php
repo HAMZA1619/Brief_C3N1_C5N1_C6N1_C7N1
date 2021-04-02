@@ -1,8 +1,11 @@
 <?php  session_start() ; ?>
+
 <?php
 if (isset($_SESSION['db_nom'])) { 
     include "header.php" ;
     include "link.php";
+    echo "<br>";
+    echo "<a  href='ajout_form.php'><button class='art niv btn bouton'>add formation</button> </a>";
     include "db_conn.php";
 
     $qry="SELECT * FROM developpeurs ";
@@ -16,31 +19,44 @@ if (isset($_SESSION['db_nom'])) {
     $r= mysqli_query($con , $qy);
     if ($re) {
         echo "<h2>liste des développeurs ayant un formations:</h2>";
-      
+        echo "<table class=' table fm' border=1>";
+        echo " <th colspan='5'>dev name </th>
+        <th colspan='5' >techno </th>
+        <th colspan='5'>date </th>";
+
       while( $row= mysqli_fetch_array($re) and $ro= mysqli_fetch_assoc($r))
       {
-        
-          echo "<ul class='li' >";
-          echo "<li  >-".$row['nom']." ". $row['prénom']."
-          <span  > On <strong >".$ro['techno']."</strong> Le : <strong > ". $ro['date']."</strong></span>
-          <form action='formation.php' method='POST' >
-            <input class='delete' type='submit' name='del' value='".$row['id']." '>
-          </form>
+       $d= $ro['id_form'];
+        echo "<tr>";
+        echo "<td colspan='5'><strong> ".$row['nom']." ". $row['prénom']."</strong></td>" ;
+        echo "<td colspan='5'><strong> ".$ro['techno']."</strong></td>" ;
+        echo "<td colspan='5'><strong> ".$ro['date']."</strong></td>" ;
+        echo "<td colspan='1' >";
+        echo "<strong><a class='a' href='formation.php?del=$d' >Delet</a></strong>";
+        echo "</tr>";
+  
           
-          </li>";
-          echo "</ul>";
-
       //  delete a formation
-      if (isset($_POST["del"])) {
-        $su= $_SESSION['sub'];
-        $quer="DELETE FROM formations WHERE techno = '$su' AND id = '". $_POST['del']."' ";
-        $d= mysqli_query($con , $quer);
-        if (!$d) {
-            die('erreur').mysqli_error($d);
-        }
+  
+    }
+    if (isset($_GET["del"])) {
+      $id = $_GET['del'];
+      $quer="DELETE FROM formations WHERE id_form = '$id' ";
+      $d= mysqli_query($con , $quer);
+      if (!$d) {
+          die('erreur').mysqli_error($d);
       }
-    } 
+      $page = $_SERVER['PHP_SELF'];
+      $sec = "0.01";
+      header("Refresh: $sec; url=$page");
+  
+    }
+    
+    
+    echo "</table>";
+ 
   }
+     
 }
       
 

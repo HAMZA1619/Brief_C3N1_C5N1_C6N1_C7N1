@@ -69,34 +69,12 @@ if (isset($_SESSION['db_nom'])) {
        echo "<div class='form'>";
        echo "<h2 class='valu'>ON ".strtoupper($value)."</h2>";
        echo "<h3 >Nombre d'expere : ".count($one ?? [])."</h3> <progress  value='$on' max='100'> </progress> ";
-       echo "<h3>Nombre de moyenne : ".count($two ?? [])."</h3> <progress value='$tw' max='100'> </progress> ";
-       echo "<h3>Nombre du moin : ".count($tree ?? [])."</h3><progress value='$tre' max='100'> </progress> ";
-       echo "<h3>Nombre unconnu : ".count($four ?? [])."</h3> <progress value='$fou' max='100'> </progress>";
+       echo "<h3>Niveau moyenne : ".count($two ?? [])."</h3> <progress value='$tw' max='100'> </progress> ";
+       echo "<h3>Niveau moins : ".count($tree ?? [])."</h3><progress value='$tre' max='100'> </progress> ";
+       echo "<h3>Niveau inconnu : ".count($four ?? [])."</h3> <progress value='$fou' max='100'> </progress>";
        echo "<h3>Totale du mombre : $totale </h3>";
        echo "</div>";
     }
-    ?>
-   
-    
-    
-    <?php
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

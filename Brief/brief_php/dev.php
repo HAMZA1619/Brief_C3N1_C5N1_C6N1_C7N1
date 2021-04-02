@@ -29,16 +29,15 @@ if (isset($_SESSION['db_nom'])) {
   
    ///DELETE A DEVELOPPEUR
       if (isset($_REQUEST["del"])) {
-        $que="DELETE FROM technos WHERE id = ".$_POST['del']."";
-         mysqli_query($con , $que);
-        $qu="DELETE FROM formations WHERE id = ".$_POST['del']."";
-        mysqli_query($con , $qu);
          $q="DELETE FROM developpeurs WHERE id = ".$_POST['del']."";
          $del= mysqli_query($con , $q);
         if (!$del) {
             die('erreur').mysqli_error($del);
         
-          }      
+          } 
+          $page = $_SERVER['PHP_SELF'];
+          $sec = "0.01";
+          header("Refresh: $sec; url=$page");     
         }
       }
   }

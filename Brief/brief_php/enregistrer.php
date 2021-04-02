@@ -21,13 +21,13 @@ if(isset($_POST['submit'])) {
          {
              $db_nom = $row['nom'];
              $db_prenom = $row['prénom'];
+             $db_mail = $row['mail'];
              $db_id =  $row['id'];
 
-               if ($db_nom ==$nom && $db_prenom ==$prenom ) {     
-                  header("location: registr.php");
-                  die;
-               }
-                 
+               if ($db_nom ==$nom && $db_prenom ==$prenom ) { 
+                header('location: registr.php');
+                  exit;     
+               }    
          } 
                   
                     

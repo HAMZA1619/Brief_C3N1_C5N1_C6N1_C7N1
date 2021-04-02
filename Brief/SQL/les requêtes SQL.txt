@@ -8,7 +8,7 @@ create table developpeurs(
 );
 
 Create table technos (
-  
+  id_tech INTEGER PRIMARY KEY AUTO_INCREMENT,
    id INTEGER not null,
    Foreign Key(id) references developpeurs ( id),
    html INTEGER, 
@@ -20,7 +20,7 @@ Create table technos (
 );
 	
 create table formations (
-  
+  id_form INTEGER PRIMARY KEY AUTO_INCREMENT,
   id INTEGER not null,
  Foreign Key(id) references developpeurs ( id),
   techno varchar(255),
