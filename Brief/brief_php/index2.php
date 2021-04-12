@@ -1,6 +1,6 @@
 <?php include "header.php";
 echo  "</nav>"; ?>
-    <h1>VOTRE CONNAISSANCES</h1>";
+    <h1>VOTRE CONNAISSANCES</h1>
    <form class="form"  action='connaissances.php' method='POST'>
         <div> 
             <label >HTML</label>
