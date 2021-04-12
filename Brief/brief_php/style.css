@@ -9,10 +9,7 @@ body {
     font-size: 14px;
     background-color: rgb(92, 182, 182);
     }
-.art{
-    margin-left: 25%;
-    background-color: rgb(92, 182, 182);
-}
+
 .nav{
     padding: 20px;
     border: transparent;
@@ -37,34 +34,15 @@ ul{
 li{
     display: flex;
     justify-content: space-between;
-    margin-right: 35%;
- 
-   
+    margin-right: 35%; 
 }
-.li{
-    margin-top: 10px;
-}
-.delete {
-  
-  background-image: url(./img/delete.png);
-  background-repeat: no-repeat;
-  background-position: center;
-    border-radius: 4px;
-    width: 30px;
-    height: 40px;
-    padding: 10px ;
-    color: transparent;
 
-} 
-
-
-
-    h1,h2{
+h1,h2{
         text-align: center;
         margin: 40px auto;
     }
     
-    .form{
+.form{
         padding: 20px ;
         background-color: #ffffff;
         margin:auto;
@@ -74,12 +52,13 @@ li{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-    }
-    .for{
+}
+    
+.for{
         width: 50%;
         height: 350px; 
     }
-    input {
+input {
         background-color: #ffff;
         width: 70%;
         height: 40px;
@@ -88,13 +67,13 @@ li{
         border-bottom: 1px solid ;
         padding: 10px;
     }
-      input:hover , input:active {
+input:hover , input:active {
        
         border: transparent;
         border-bottom: 1px solid rgb(120, 236, 245);
        
         }
-        div {
+div {
             padding: 5px;
            border: 1px solid black;
            width: 65%;
@@ -105,7 +84,7 @@ li{
             border-radius: 6px;
             background-color: rgb(120, 236, 245);
         }
-        .div {
+.div {
             width: 100%;
             height: 50px;
             display: flex;
@@ -115,30 +94,30 @@ li{
             background-color: transparent;
         }
     
-    .bouton{
+.bouton{
         border: 1px solid ;
         width: 40%;
         border-radius: 6px;
     }
-    .bouton:hover {
+.bouton:hover {
     color: #ffffff;
     background-color: rgb(120, 236, 245);
     border: 1px solid  rgb(120, 236, 245);
     border-radius: 6px;
     }
-    .btn{
+.btn{
         width: 10%;
         margin-left: 5px; 
     }
-    .niveau{
+.niveau{
         border: 1px solid ;
         width: 15%;
         border-radius: 6px;
     }
-    .up{
+.up{
         display: flex;
     }
-    .niv{
+.niv{
       margin-right: 3px;
         height: 40px;
         border-radius: 6px;    
@@ -146,13 +125,15 @@ li{
     }
     .updete{
         background-image: url(./img/update.png);
-    }
-    .save{
-        color: transparent;
-        background-image: url(./img/save.png);
         background-repeat: no-repeat;
         background-position: center;
+        border-radius: 4px;
+        width: 30px;
+        height: 40px;
+        padding: 10px ;
+        color: transparent;
     }
+
     .span{
         display: flex;
         justify-content: start;

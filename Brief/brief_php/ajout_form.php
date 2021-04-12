@@ -2,7 +2,7 @@
     include "db_conn.php";
  echo  "</nav>";
  echo "<br>";
- echo "<a href='formation.php'><button class='art niv btn bouton'>go back</button> </a>";
+ echo "<a href='formation.php'><button class='niv btn bouton'>go back</button> </a>";
  $qry="SELECT * FROM developpeurs where id > 1 ORDER BY nom ASC  ";
  if(!$qry)
  {
@@ -13,7 +13,7 @@
   <h2>add a formation</h2>
   <form  class="form for" action='ajout_form.php' method='post'>
    
-            <select class="div" name="dev" >
+            <select class="div fm" name="dev" >
             <?php
              if ($re) {
                 while($row= mysqli_fetch_array($re))
@@ -23,7 +23,7 @@
                 }}
             ?>     
             </select>
-            <select class="div" name="niveau" >
+            <select class="div fm" name="niveau" >
                 <option value='HTML'>HTML</option>
                 <option value="CGI">CGI</option>
                 <option value="JS">JS</option>
@@ -31,9 +31,9 @@
                 <option value="PHP">PHP</option>
                
             </select>
-            <input class="div"  type="date" name="date" >
+            <input class=" div fm"  type="date" name="date" >
      
-        <input class="bouton " type="submit" name="sav" value="add">
+        <input class="bouton fm " type="submit" name="sav" value="add">
     </form>
     <?php
      if (isset($_POST["sav"])) {

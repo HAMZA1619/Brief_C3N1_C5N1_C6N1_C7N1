@@ -5,7 +5,7 @@ if (isset($_SESSION['db_nom'])) {
     include "header.php" ;
     include "link.php";
     echo "<br>";
-    echo "<a  href='ajout_form.php'><button class='art niv btn bouton'>add formation</button> </a>";
+    echo "<a  href='ajout_form.php'><button class='niv btn bouton'>add formation</button> </a>";
     include "db_conn.php";
 
     $qry="SELECT * FROM developpeurs ";
